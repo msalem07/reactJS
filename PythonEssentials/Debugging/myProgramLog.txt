@@ -1,0 +1,28 @@
+ 2017-02-15 18:42:34,423 - DEBUG - Start of program
+ 2017-02-15 18:42:34,438 - DEBUG - Start of factorial(5%)
+ 2017-02-15 18:42:34,438 - DEBUG - i is 1, total is 1
+ 2017-02-15 18:42:34,438 - DEBUG - i is 2, total is 2
+ 2017-02-15 18:42:34,438 - DEBUG - i is 3, total is 6
+ 2017-02-15 18:42:34,438 - DEBUG - i is 4, total is 24
+ 2017-02-15 18:42:34,438 - DEBUG - i is 5, total is 120
+ 2017-02-15 18:42:34,438 - DEBUG - End of factorial(5%)
+ 2017-02-15 18:42:34,438 - DEBUG - End of program
+ 2017-02-15 18:42:34,438 - DEBUG - Some debugging details.
+ 2017-02-15 18:42:34,438 - INFO - The logging module is working.
+ 2017-02-15 18:42:34,438 - WARNING - An error message is about to be logged.
+ 2017-02-15 18:42:34,438 - ERROR - An error has occurred.
+ 2017-02-15 18:42:34,438 - CRITICAL - The program is unable to recover!
+ 2017-02-15 18:42:50,842 - DEBUG - Start of program
+ 2017-02-15 18:42:50,842 - DEBUG - Start of factorial(5%)
+ 2017-02-15 18:42:50,842 - DEBUG - i is 1, total is 1
+ 2017-02-15 18:42:50,842 - DEBUG - i is 2, total is 2
+ 2017-02-15 18:42:50,842 - DEBUG - i is 3, total is 6
+ 2017-02-15 18:42:50,842 - DEBUG - i is 4, total is 24
+ 2017-02-15 18:42:50,842 - DEBUG - i is 5, total is 120
+ 2017-02-15 18:42:50,842 - DEBUG - End of factorial(5%)
+ 2017-02-15 18:42:50,842 - DEBUG - End of program
+ 2017-02-15 18:42:50,842 - DEBUG - Some debugging details.
+ 2017-02-15 18:42:50,842 - INFO - The logging module is working.
+ 2017-02-15 18:42:50,842 - WARNING - An error message is about to be logged.
+ 2017-02-15 18:42:50,842 - ERROR - An error has occurred.
+ 2017-02-15 18:42:50,842 - CRITICAL - The program is unable to recover!

@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <NavBar greeting={this.props.route.greeting}/>
+          <NavBar greeting={this.props.greeting}/>
           {this.props.children}
       </div>
     );

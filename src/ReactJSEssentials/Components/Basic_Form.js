@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'react-router/lib/Link'
 
+
 class Basic_Form extends React.Component{
 
     constructor(props){
@@ -36,6 +37,7 @@ class Basic_Form extends React.Component{
             entry4: this.state.entry4
         };
         this.setState({data: temp});
+
         this.props.onClick(this.state.entry1);
         console.log("pressed");
     }
@@ -43,7 +45,7 @@ class Basic_Form extends React.Component{
         return (
             <div>
                 <form>
-                    <label>Value for entry one: {JSON.stringify(this.props)} </label><br/>
+                    <label>Value for entry one: {JSON.stringify(this.state)} </label><br/>
 
                     <input name="entry1" onChange={this.handleUserInput} type="text" value={this.state.entry1}/><br/>
                     <label>Value for entry two: {this.state.entry2}</label><br/>
@@ -59,11 +61,13 @@ class Basic_Form extends React.Component{
                         <option value="option4">Option 4</option>
                     </select>
                     <br/>
-                    <button onClick={this.handleSubmit} type="button">Submit</button>
+                    <Link to="/"><button onClick={this.handleSubmit} type="button">Submit</button></Link>
                 </form>
 
-                <Link to="/"><label>This is the submitted result:</label><br /></Link>
+                <label>This is the submitted result:</label><br />
                 <p> {JSON.stringify(this.props) }</p>
+
+                <div id="result"></div>
             </div>
         );
     }

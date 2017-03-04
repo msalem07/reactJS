@@ -1,10 +1,15 @@
 import React from 'react'
 import Link from 'react-router/lib/Link'
+import hashHistory from 'react-router'
 
 class TwoTextInputBoxes extends React.Component{
 
     constructor(props){
         super(props);
+        this.state = {
+            username: '',
+            password: ''
+        }
         this.styleDiv = {
             marginTop:  '200px'
         };
@@ -29,15 +34,32 @@ class TwoTextInputBoxes extends React.Component{
             borderRadius:   '4px',
             backgroundColor:'orange'
         }
+        this.handleUserInput = this.handleUserInput.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+    }
+    handleUserInput(e){
+        let name = e.target.name;
+
+        this.setState({[name]: e.target.value});
+    }
+    handleClick(){
+        alert('username: ' + this.state.username);
+        alert('password: ' + this.state.password);
+        let answer = prompt('Yes?:');
+        if(answer.toLowerCase() == 'yes') {
+            //Apparently the new way to navigate to a new link
+            this.props.router.push('home/'+this.state.username);
+        }
+
     }
     render(){
 
         return (
             <div style={this.styleDiv}>
                 <label style={this.styleLabel}> Username:</label><br/>
-                <input style={this.styleInput} type="text" /><br/>
+                <input style={this.styleInput} onChange={this.handleUserInput} name="username" type="text" /><br/>
                 <label style={this.styleLabel}>Password:</label><br/>
-                <input style={this.styleInput} type="password" /><br/>
+                <input style={this.styleInput} onChange={this.handleUserInput} type="password" name="password" /><br/>
 
                 <div >
                     <div style={{display: 'inline-block', margin: '0px 15px'}}>
@@ -48,7 +70,7 @@ class TwoTextInputBoxes extends React.Component{
                     </div>
 
                 </div>
-                <button style={this.styleButton} type="button">Log In</button>
+                <button style={this.styleButton} onClick={this.handleClick} type="button">Log In</button>
             </div>
         );
     }
